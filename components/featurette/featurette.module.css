@@ -61,6 +61,11 @@
 		margin-left: 75px;
 	}
 
+	svg {
+		width: 40px;
+		height: auto;
+	}
+
 	h2 {
 		font-size: 2rem;
 		margin: 0;
@@ -70,4 +75,9 @@
 		font-size: 1.2rem;
 		margin: 0;
 	}
+}
+
+.contentHeader {
+	display: grid;
+	gap: 10px;
 }
