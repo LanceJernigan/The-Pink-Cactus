@@ -1,0 +1,6 @@
+.body {
+	display: grid;
+	grid-auto-flow: row;
+	position: relative;
+	background: #ff4679;
+}

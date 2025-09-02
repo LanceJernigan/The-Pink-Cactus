@@ -1,0 +1,62 @@
+.component {
+	padding: 200px 30px 100px;
+	background: #fcc3b0;
+	min-height: 100vh;
+	margin-top: -80px;
+	display: grid;
+	align-items: center;
+
+	@media (min-width: 768px) {
+		padding: 0 30px;
+	}
+}
+
+.wrapper {
+	max-width: 1200px;
+	margin: auto;
+	display: grid;
+	width: 100%;
+	align-items: center;
+	gap: 50px;
+
+	@media (min-width: 768px) {
+		grid-template-columns: 1fr 1fr;
+		gap: 100px;
+	}
+}
+
+.logo {
+	svg {
+		width: 100%;
+		height: auto;
+	}
+}
+
+.content {
+	color: #ff4679;
+	display: grid;
+	gap: 50px;
+	max-width: 440px;
+}
+
+.contentHeader {
+	display: grid;
+	gap: 15px;
+
+	h1 {
+		font-size: 35px;
+		font-weight: 900;
+	}
+
+	h2 {
+		font-size: 30px;
+		font-weight: 500;
+	}
+}
+
+.buttons {
+	display: grid;
+	justify-content: start;
+	gap: 25px;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
