@@ -29,6 +29,16 @@
 			}
 		}
 	}
+
+	&[data-reverse="false"] {
+		@media (min-width: 768px) {
+			grid-template-areas: "content image";
+		}
+
+		.content {
+			margin-left: 75px;
+		}
+	}
 }
 
 .image {
@@ -54,10 +64,6 @@
 	display: grid;
 	gap: 15px;
 	max-width: 440px;
-
-	@media (min-width: 768px) {
-		margin-left: 75px;
-	}
 
 	svg {
 		height: 30px;
