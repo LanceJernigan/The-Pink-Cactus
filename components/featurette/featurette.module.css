@@ -6,7 +6,7 @@
 	max-width: 1200px;
 	margin: auto;
 	display: grid;
-	gap: 25px;
+	gap: 50px;
 	align-items: center;
 
 	@media (min-width: 768px) {
@@ -15,20 +15,18 @@
 	}
 
 	&[data-reverse="true"] {
-		grid-template-areas: "content image";
-
 		@media (min-width: 768px) {
 			grid-template-areas: "image content";
 			direction: rtl;
-		}
 
-		.image,
-		.content {
-			direction: ltr;
-		}
+			.image,
+			.content {
+				direction: ltr;
+			}
 
-		.content {
-			margin-right: 75px;
+			.content {
+				margin-right: 75px;
+			}
 		}
 	}
 }
