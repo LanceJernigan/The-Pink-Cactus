@@ -1,0 +1,39 @@
+.featurettes {
+	padding: 50px 0;
+	display: grid;
+	gap: 50px;
+	position: relative;
+	z-index: 1;
+
+	@media (min-width: 768px) {
+		padding: 120px 30px;
+		gap: 120px;
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: -100px;
+		left: 0;
+		width: 100%;
+		height: 100px;
+		background: linear-gradient(to bottom, transparent, #ff4679);
+		z-index: -1;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: -100px;
+		left: 0;
+		width: 100%;
+		height: 100px;
+		background: linear-gradient(to top, transparent, #ff4679);
+		z-index: -1;
+	}
+}
+
+.spacer {
+	background: #fcc3b0;
+	height: 100vh;
+}
