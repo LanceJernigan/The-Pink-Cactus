@@ -1,6 +1,7 @@
 import Featurette from "@/components/featurette";
 import Hero from "@/components/hero";
 import styles from "./page.module.css";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
@@ -17,7 +18,7 @@ export default function Home() {
           reverse
         />
       </section>
-      <div className={styles.spacer} />
+      <Footer />
     </>
   );
 }
