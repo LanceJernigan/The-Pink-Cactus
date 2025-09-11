@@ -36,7 +36,10 @@
 	color: #ff4679;
 	display: grid;
 	gap: 50px;
-	max-width: 440px;
+
+	@media (min-width: 768px) {
+		max-width: 440px;
+	}
 }
 
 .contentHeader {

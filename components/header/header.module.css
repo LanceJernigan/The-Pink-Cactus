@@ -1,5 +1,6 @@
 .component {
-	background: rgba(255, 255, 255, 0.2);
+	/* background: rgba(255, 255, 255, 0.2); */
+	background: transparent;
 	backdrop-filter: blur(10px);
 	position: sticky;
 	top: 0;
