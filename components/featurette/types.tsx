@@ -1,5 +1,9 @@
 export type FeaturetteProps = {
-    title: string;
-    description: string;
-    reverse?: boolean;
-}
+	title: string;
+	description: string;
+	image: {
+		src: string;
+		alt: string;
+	};
+	reverse?: boolean;
+};
