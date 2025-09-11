@@ -15,7 +15,7 @@ const Hero = () => {
 				<div className={styles.content}>
 					<header className={styles.contentHeader}>
 						<h1>Your Night, Your Stage</h1>
-						<h2>Gather with friends, have fun, & celebrate the good life.</h2>
+						<h2>Gather with friends & celebrate the good life.</h2>
 					</header>
 					<div className={styles.buttons}>
 						<Button
