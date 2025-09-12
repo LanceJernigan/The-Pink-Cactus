@@ -1,0 +1,7 @@
+.menuItems {
+	padding: 150px 0 100px;
+	margin-top: -80px;
+	background: #fcc3b0;
+	display: grid;
+	gap: 75px;
+}
