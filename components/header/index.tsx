@@ -1,6 +1,7 @@
 import FlowerIcon from "@/icons/flower";
 import styles from "./header.module.css";
 import Link from "next/link";
+import LogoText from "@/icons/logoText";
 
 const Header = () => {
 	return (
@@ -11,6 +12,7 @@ const Header = () => {
 					className={styles.logo}
 				>
 					<FlowerIcon />
+					{/* <LogoText /> */}
 				</Link>
 			</div>
 		</header>

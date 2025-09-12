@@ -1,6 +1,6 @@
 .component {
-	/* background: rgba(255, 255, 255, 0.2); */
-	background: transparent;
+	background: rgba(255, 255, 255, 0.2);
+	/* background: transparent; */
 	backdrop-filter: blur(10px);
 	position: sticky;
 	top: 0;
@@ -18,5 +18,11 @@
 		height: 30px;
 		width: auto;
 		color: #ff4679;
+	}
+
+	a {
+		display: grid;
+		grid-auto-flow: column;
+		gap: 10px;
 	}
 }

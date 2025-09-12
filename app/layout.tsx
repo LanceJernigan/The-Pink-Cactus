@@ -4,6 +4,7 @@ import styles from "./layout.module.css";
 import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import { Analytics } from "@vercel/analytics/next";
 
 const gabarito = Gabarito({
 	variable: "--font-gabarito",
@@ -23,6 +24,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={`${gabarito.variable} ${styles.body}`}>
+				<Analytics />
 				<Header />
 				<main className={styles.main}>{children}</main>
 				<Footer />
