@@ -27,7 +27,7 @@ export default function Home() {
 				<Featurette
 					title="Outdoor Patio"
 					image={{
-						src: "/assets/images/house.jpeg",
+						src: "/assets/images/house.jpg",
 						alt: "Karaoke room with pink lighting and a microphone on a stand",
 					}}
 					description="Take it outside. Our spacious patio has covered seating and an easygoing vibe — perfect for cooling down after a karaoke session, sipping cocktails under the lights, or catching up with friends late into the night."
