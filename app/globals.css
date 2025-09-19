@@ -9,6 +9,11 @@ body {
 	font-family: "Gabarito", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+
+	display: grid;
+	grid-auto-flow: row;
+	position: relative;
+	background: #000;
 }
 
 * {
