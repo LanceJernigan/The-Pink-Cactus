@@ -35,40 +35,15 @@ const shooters = [
 ];
 
 const arepas = [
-	{
-		name: "Ropa Vieja",
-		description: "ropa vieja, black beans, mexican cheese, plantain",
-		price: 8,
-	},
-	{
-		name: "Pollo Asado",
-		description: "pollo asado, avocado, chipotle lime mayo",
-		price: 8,
-	},
-	{
-		name: "Black Bean Hummus",
-		description:
-			"black bean hummus, red bell pepper, mexican cheese, pickled onion",
-		price: 8,
-	},
+	"ropa vieja, black beans, mexican cheese, plantain",
+	"pollo asado, avocado, chipotle lime mayo",
+	"black bean hummus, red bell pepper, mexican cheese, pickled onion",
 ];
 
 const flatbread = [
-	{
-		name: "Ropa Vieja",
-		description: "ropa vieja, marinara, mexican cheese",
-		price: 12,
-	},
-	{
-		name: "Pollo Asado",
-		description: "pollo asado, red bell peeppers, marinara, mexican cheese",
-		price: 12,
-	},
-	{
-		name: "Zucchini",
-		description: "zucchini, mushroom, pickled onion, marinara, mexican cheese",
-		price: 12,
-	},
+	"ropa vieja, marinara, mexican cheese",
+	"pollo asado, red bell peeppers, marinara, mexican cheese",
+	"zucchini, mushroom, pickled onion, marinara, mexican cheese",
 ];
 
 export { cocktails, shooters, arepas, flatbread };
