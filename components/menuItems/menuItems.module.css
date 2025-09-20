@@ -25,16 +25,21 @@
 
 .titleAccent {
 	display: block;
-	font-size: 35px;
+	font-size: 25px;
 	font-weight: 500;
 	color: #ff4679;
 	font-family: var(--font-gladolia);
 	text-transform: capitalize;
-	margin-bottom: -15px;
+	margin-bottom: -10px;
+
+	@media (min-width: 768px) {
+		font-size: 35px;
+		margin-bottom: -15px;
+	}
 }
 
 .title {
-	font-size: 75px;
+	font-size: 45px;
 	font-weight: 500;
 	color: #ff4679;
 	font-family: var(--font-milliffigh);
@@ -43,21 +48,25 @@
 	background: #fcc3b0;
 	padding: 0 20px;
 	z-index: 1;
+
+	@media (min-width: 768px) {
+		font-size: 75px;
+	}
 }
 
 .list {
 	display: grid;
 	gap: 30px 50px;
 	list-style: none;
-	padding: 70px 50px 50px;
+	padding: 40px 25px 50px;
 	margin: 0;
-	margin-top: -50px;
-	/* border: solid 5px #ff4679; */
+	margin-top: -20px;
 	border-radius: 20px;
-
 	box-shadow: 0 0 0 5px #1dd594, 0 0 0 10px #fcc3b0, 0 0 0 15px #ff4679;
 
 	@media (min-width: 768px) {
+		margin-top: -50px;
+		padding: 70px 50px 50px;
 		grid-template-columns: 1fr 1fr;
 	}
 }
@@ -79,13 +88,22 @@
 	display: grid;
 	grid-template-columns: auto min-content;
 	align-items: end;
+
+	@media (min-width: 768px) {
+		grid-template-columns: auto min-content;
+		align-items: end;
+	}
 }
 
 .itemTitle {
-	font-size: 40px;
+	font-size: 30px;
 	font-weight: 900;
 	color: #ff4679;
 	font-family: var(--font-balney);
+
+	@media (min-width: 768px) {
+		font-size: 40px;
+	}
 }
 
 .itemDescription {
@@ -96,9 +114,13 @@
 }
 
 .itemPrice {
-	font-size: 30px;
+	font-size: 25px;
 	font-weight: 900;
 	color: #ff4679;
+
+	@media (min-width: 768px) {
+		font-size: 30px;
+	}
 }
 
 .variations {
