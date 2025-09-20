@@ -49,6 +49,10 @@
 	border-radius: 20px;
 	box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.25);
 	position: relative;
+	/* box-shadow: 0 0 20px rgba(255, 70, 121, 0.2); */
+	/* box-shadow: 0 0 20px rgba(29, 213, 148, 0.2); */
+	/* box-shadow: 0 0 0 3px #1dd594, 0 0 0 6px #000, 0 0 0 9px #ff4679; */
+	/* box-shadow: 0 0 20px rgba(255, 255, 255, 0.25); */
 
 	img {
 		width: 100%;
@@ -75,8 +79,9 @@
 	}
 
 	h2 {
-		font-size: 2rem;
+		font-size: 2.5rem;
 		margin: 0;
+		font-family: var(--font-gladolia);
 	}
 
 	p {
