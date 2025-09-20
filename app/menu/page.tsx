@@ -16,7 +16,7 @@ export default function Menu() {
 				/>
 				<MenuItems
 					items={[
-						{ name: "Arepas", price: 5, variations: arepas },
+						{ name: "Arepa", price: 5, variations: arepas },
 						{ name: "Flatbread", price: 12, variations: flatbread },
 					]}
 					title="Food"
