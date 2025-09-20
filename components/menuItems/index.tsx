@@ -1,4 +1,4 @@
-import Flower from "@/icons/flower";
+// import Flower from "@/icons/flower";
 import styles from "./menuItems.module.css";
 import { MenuItemsProps } from "./types";
 
