@@ -1,0 +1,155 @@
+.component {
+	min-height: calc(100vh - 94px);
+	background: #fcc3b0;
+	padding: 180px 30px;
+	margin-top: -80px;
+}
+
+.wrapper {
+	max-width: 1200px;
+	margin: auto;
+	display: grid;
+	gap: 50px;
+
+	@media (min-width: 768px) {
+		gap: 100px;
+	}
+}
+
+.header {
+	display: grid;
+	gap: 10px;
+	text-align: center;
+
+	h1 {
+		font-size: 45px;
+		font-weight: 500;
+		color: #ff4679;
+		font-family: var(--font-gladolia);
+	}
+
+	p {
+		font-size: 1.2rem;
+		color: #ff4679;
+	}
+}
+
+.content {
+	display: grid;
+	gap: 100px;
+
+	@media (min-width: 768px) {
+		grid-template-columns: 1fr 300px;
+	}
+}
+
+.form {
+	display: grid;
+	gap: 15px;
+
+	label {
+		display: grid;
+		gap: 5px;
+		font-size: 1.5rem;
+		font-family: var(--font-milliffigh);
+		color: #ff4679;
+
+		&:last-child:nth-child(odd) {
+			grid-column: 1 / -1;
+		}
+	}
+
+	input {
+		padding: 10px 15px;
+		border-radius: 20px;
+		outline: none;
+		border: none;
+		font-size: 1.2rem;
+		background: transparent;
+		border: solid 2px #ff4679;
+		color: #ff4679;
+		width: 100%;
+	}
+
+	textarea {
+		padding: 10px 15px;
+		font-size: 1.2rem;
+		height: 300px;
+		outline: none;
+		border: none;
+		border-radius: 20px;
+		background: transparent;
+		border: solid 2px #ff4679;
+		color: #ff4679;
+	}
+}
+
+.fields {
+	display: grid;
+	gap: 20px;
+
+	@media (min-width: 768px) {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+.info {
+	display: grid;
+	gap: 20px;
+	align-content: start;
+	/* padding: 20px;
+	border-radius: 20px;
+	box-shadow: 0 0 0 5px #1dd594, 0 0 0 10px #fcc3b0, 0 0 0 15px #ff4679; */
+
+	h2 {
+		font-size: 30px;
+		font-weight: 500;
+		color: #ff4679;
+		font-family: var(--font-gladolia);
+	}
+}
+
+.list {
+	display: grid;
+	gap: 15px;
+	align-content: start;
+	list-style: none;
+	margin: 0;
+
+	h3 {
+		font-size: 1.5rem;
+	}
+
+	p {
+		font-size: 1.1rem;
+		line-height: 1.5;
+	}
+}
+
+.infoItem {
+	a {
+		display: grid;
+		align-items: center;
+		gap: 15px;
+		border: solid 2px #ff4679;
+		padding: 10px 15px;
+		border-radius: 20px;
+		grid-template-columns: 40px 1fr;
+		font-size: 25px;
+		font-weight: 900;
+		margin: 0;
+		font-family: var(--font-balney);
+		color: #ff4679;
+	}
+
+	@media (min-width: 768px) {
+		grid-template-columns: 40px 1fr;
+	}
+
+	svg {
+		height: auto;
+		width: 100%;
+		max-width: 60px;
+		color: #ff4679;
+	}
+}
