@@ -1,6 +1,7 @@
 export type FeaturetteProps = {
 	title: string;
-	description: string;
+	children?: React.ReactNode;
+
 	image: {
 		src: string;
 		alt: string;

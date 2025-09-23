@@ -5,7 +5,7 @@ import Flower from "@/icons/flower";
 
 const Featurette = ({
 	title,
-	description,
+	children,
 	image,
 	reverse = false,
 }: FeaturetteProps) => (
@@ -25,9 +25,9 @@ const Featurette = ({
 			<div className={styles.content}>
 				<div className={styles.contentHeader}>
 					<Flower />
-					<h2 className="featurette-title">{title}</h2>
+					<h2 className={styles.title}>{title}</h2>
 				</div>
-				<p className="featurette-description">{description}</p>
+				<div className={styles.children}>{children}</div>
 			</div>
 		</div>
 	</section>
