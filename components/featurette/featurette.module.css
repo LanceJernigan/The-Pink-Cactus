@@ -98,4 +98,10 @@
 .children {
 	display: grid;
 	gap: 15px;
+
+	button {
+		@media (min-width: 768px) {
+			width: max-content;
+		}
+	}
 }
