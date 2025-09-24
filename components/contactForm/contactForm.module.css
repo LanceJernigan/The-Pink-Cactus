@@ -46,6 +46,7 @@
 .form {
 	display: grid;
 	gap: 15px;
+	transition: opacity 0.2s ease-in-out;
 
 	label {
 		display: grid;
@@ -81,6 +82,36 @@
 		background: transparent;
 		border: solid 2px #ff4679;
 		color: #ff4679;
+	}
+
+	&[data-submitting="true"] {
+		opacity: 0.5;
+	}
+}
+
+.message {
+	display: grid;
+	gap: 30px;
+	color: #ff4679;
+	background: rgba(255, 255, 255, 0.2);
+	border-radius: 20px;
+	padding: 50px 30px;
+	text-align: center;
+	align-content: start;
+
+	svg {
+		width: 75px;
+		height: auto;
+		margin: auto;
+	}
+
+	h2 {
+		max-width: 400px;
+		margin: auto;
+		font-size: 30px;
+		font-weight: 500;
+		color: #ff4679;
+		font-family: var(--font-milliffigh);
 	}
 }
 
