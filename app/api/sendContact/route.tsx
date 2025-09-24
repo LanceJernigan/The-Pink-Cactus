@@ -17,8 +17,8 @@ export async function POST(req: Request) {
 		}
 
 		const data = await resend.emails.send({
-			from: `The Pink Cactus <contact@thepinkcactusknox.com>`,
-			to: "lance.t.jernigan@gmail.com",
+			from: `The Pink Cactus <no-reply@thepinkcactusknox.com>`,
+			to: "thepinkcactusknox@gmail.com",
 			subject: "New Contact Form Submission",
 			react: (
 				<ContactTemplate
