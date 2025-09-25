@@ -4,7 +4,9 @@
 	top: 0;
 	padding: 25px 30px;
 	z-index: 999;
-	transition: background 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out,
+	transition:
+		background 0.3s ease-in-out,
+		backdrop-filter 0.3s ease-in-out,
 		box-shadow 0.3s ease-in-out;
 
 	&[data-scrolled="true"] {
@@ -19,6 +21,7 @@
 	margin: auto;
 	display: grid;
 	justify-content: space-between;
+	grid-auto-flow: column;
 
 	svg {
 		height: 30px;

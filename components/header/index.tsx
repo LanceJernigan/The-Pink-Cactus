@@ -1,9 +1,10 @@
 "use client";
 
-import FlowerIcon from "@/icons/flower";
-import styles from "./header.module.css";
-import Link from "next/link";
 import { useEffect, useState } from "react";
+import Link from "next/link";
+import FlowerIcon from "@/icons/flower";
+import Navigation from "@/components/navigation";
+import styles from "./header.module.css";
 // import LogoText from "@/icons/logoText";
 
 const Header = () => {
@@ -39,6 +40,7 @@ const Header = () => {
 					<FlowerIcon />
 					{/* <LogoText /> */}
 				</Link>
+				<Navigation />
 			</div>
 		</header>
 	);

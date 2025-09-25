@@ -7,6 +7,7 @@
 	margin: auto;
 	display: grid;
 	/* gap: 30px; */
+	padding: 15px;
 	align-items: center;
 }
 
@@ -62,7 +63,10 @@
 	margin: 0;
 	margin-top: -20px;
 	border-radius: 20px;
-	box-shadow: 0 0 0 5px #1dd594, 0 0 0 10px #fcc3b0, 0 0 0 15px #ff4679;
+	box-shadow:
+		0 0 0 5px #1dd594,
+		0 0 0 10px #fcc3b0,
+		0 0 0 15px #ff4679;
 
 	@media (min-width: 768px) {
 		margin-top: -50px;

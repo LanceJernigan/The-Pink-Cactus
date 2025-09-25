@@ -41,9 +41,9 @@ const ContactForm = () => {
 		message: "",
 	});
 	const [errors, setErrors] = useState({
-		name: "",
-		email: "",
-		message: "",
+		name: "You must enter a name.",
+		email: "You must enter a valid email.",
+		message: "You must enter a valid message.",
 	});
 	const handleSubmit: React.FormEventHandler<HTMLFormElement> = async (e) => {
 		e.preventDefault();
