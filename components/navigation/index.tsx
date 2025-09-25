@@ -7,7 +7,7 @@ import Instagram from "@/icons/instagram";
 import Facebook from "@/icons/facebook";
 
 const Navigation = () => {
-	const [isOpen, setIsOpen] = useState(true);
+	const [isOpen, setIsOpen] = useState(false);
 
 	const handleClick = () => {
 		setIsOpen(!isOpen);
