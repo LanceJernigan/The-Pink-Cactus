@@ -4,6 +4,7 @@ import Logo from "@/icons/logo";
 import Button from "@/components/button";
 import styles from "./hero.module.css";
 import { redirect, RedirectType } from "next/navigation";
+import Image from "next/image";
 
 const Hero = () => {
 	return (
@@ -14,8 +15,7 @@ const Hero = () => {
 				</div>
 				<div className={styles.content}>
 					<header className={styles.contentHeader}>
-						<h1>Your Night, Your Stage</h1>
-						<h2>Gather with friends & celebrate the good life.</h2>
+						<h1>Gather with friends & celebrate the good life.</h1>
 					</header>
 					<div className={styles.buttons}>
 						<Button
@@ -38,6 +38,14 @@ const Hero = () => {
 						</Button>
 					</div>
 				</div>
+			</div>
+			<div className={styles.background}>
+				<Image
+					src="/assets/images/cacti.jpg"
+					alt="Cacti"
+					fill
+					priority
+				/>
 			</div>
 		</section>
 	);

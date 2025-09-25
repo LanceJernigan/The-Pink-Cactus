@@ -6,57 +6,146 @@
 	max-width: 1200px;
 	margin: auto;
 	display: grid;
-	gap: 30px;
+	/* gap: 30px; */
 	align-items: center;
 }
 
 .header {
 	display: grid;
 	gap: 10px;
+	justify-content: center;
 
 	svg {
 		height: 30px;
 		width: auto;
 		color: #1dd594;
+		margin: auto;
 	}
+}
 
-	h2 {
-		font-size: 50px;
-		font-weight: 900;
-		color: #ff4679;
+.titleAccent {
+	display: block;
+	font-size: 25px;
+	font-weight: 500;
+	color: #ff4679;
+	font-family: var(--font-gladolia);
+	text-transform: capitalize;
+	margin-bottom: -10px;
+
+	@media (min-width: 768px) {
+		font-size: 35px;
+		margin-bottom: -15px;
+	}
+}
+
+.title {
+	font-size: 45px;
+	font-weight: 500;
+	color: #ff4679;
+	font-family: var(--font-milliffigh);
+	text-align: center;
+	text-transform: uppercase;
+	background: #fcc3b0;
+	padding: 0 20px;
+	z-index: 1;
+
+	@media (min-width: 768px) {
+		font-size: 75px;
 	}
 }
 
 .list {
 	display: grid;
-	gap: 50px;
-	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	gap: 30px 50px;
 	list-style: none;
-	padding: 0;
+	padding: 40px 25px 50px;
 	margin: 0;
+	margin-top: -20px;
+	border-radius: 20px;
+	box-shadow: 0 0 0 5px #1dd594, 0 0 0 10px #fcc3b0, 0 0 0 15px #ff4679;
+
+	@media (min-width: 768px) {
+		margin-top: -50px;
+		padding: 70px 50px 50px;
+		grid-template-columns: 1fr 1fr;
+	}
 }
 
 .listItem {
+	&:last-child:nth-child(odd) {
+		grid-column: 1 / -1;
+	}
+
 	article {
 		display: grid;
-		gap: 10px;
+		gap: 5px;
+		max-width: 525px;
+		margin: auto;
+	}
+}
+
+.itemHeader {
+	display: grid;
+	grid-template-columns: auto min-content;
+	align-items: end;
+
+	@media (min-width: 768px) {
+		grid-template-columns: auto min-content;
+		align-items: end;
 	}
 }
 
 .itemTitle {
-	font-size: 20px;
+	font-size: 30px;
 	font-weight: 900;
 	color: #ff4679;
+	font-family: var(--font-balney);
+
+	@media (min-width: 768px) {
+		font-size: 40px;
+	}
 }
 
 .itemDescription {
-	font-size: 16px;
+	font-size: 20px;
 	color: #ff4679;
 	font-style: italic;
+	font-family: var(--font-gladolia);
 }
 
 .itemPrice {
-	font-size: 18px;
+	font-size: 25px;
 	font-weight: 900;
 	color: #ff4679;
+
+	@media (min-width: 768px) {
+		font-size: 30px;
+	}
+}
+
+.variations {
+	list-style: none;
+	padding: 5px 0 0 0;
+	margin: 0;
+	font-size: 18px;
+	display: grid;
+	gap: 10px;
+
+	@media (min-width: 768px) {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+.variation {
+	color: #ff4679;
+	font-style: italic;
+	font-family: var(--font-gladolia);
+	border: solid 2px #ff4679;
+	padding: 10px;
+	border-radius: 20px;
+	text-align: center;
+
+	&:last-child:nth-child(odd) {
+		grid-column: 1 / -1;
+	}
 }

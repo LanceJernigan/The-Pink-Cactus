@@ -1,6 +1,6 @@
 import Instagram from "@/icons/instagram";
 import styles from "./footer.module.css";
-import Tiktok from "@/icons/tiktok";
+import Facebook from "@/icons/facebook";
 import Pin from "@/icons/pin";
 
 const Footer = () => (
@@ -18,11 +18,11 @@ const Footer = () => (
 				</li>
 				<li>
 					<a
-						href="https://www.instagram.com/thepinkcactusknox/"
+						href="http://www.facebook.com/thepinkcactusknox"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						<Tiktok />
+						<Facebook />
 					</a>
 				</li>
 			</ul>

@@ -1,14 +1,24 @@
 import type { Metadata } from "next";
-import { Gabarito } from "next/font/google";
+import localFont from "next/font/local";
 import styles from "./layout.module.css";
 import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { Analytics } from "@vercel/analytics/next";
 
-const gabarito = Gabarito({
-	variable: "--font-gabarito",
-	subsets: ["latin"],
+const milliffigh = localFont({
+	src: "../public/assets/fonts/milliffigh.otf",
+	variable: "--font-milliffigh",
+});
+
+const gladolia = localFont({
+	src: "../public/assets/fonts/gladolia.otf",
+	variable: "--font-gladolia",
+});
+
+const balney = localFont({
+	src: "../public/assets/fonts/balney.otf",
+	variable: "--font-balney",
 });
 
 export const metadata: Metadata = {
@@ -23,7 +33,9 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={`${gabarito.variable} ${styles.body}`}>
+			<body
+				className={`${milliffigh.variable} ${gladolia.variable} ${balney.variable} ${styles.body}`}
+			>
 				<Analytics />
 				<Header />
 				<main className={styles.main}>{children}</main>

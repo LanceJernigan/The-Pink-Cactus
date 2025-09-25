@@ -15,12 +15,11 @@ export default function Menu() {
 					title="Shooters"
 				/>
 				<MenuItems
-					items={arepas}
-					title="Arepas (order of 2)"
-				/>
-				<MenuItems
-					items={flatbread}
-					title="Flatbread"
+					items={[
+						{ name: "Arepa", price: 5, variations: arepas },
+						{ name: "Flatbread", price: 12, variations: flatbread },
+					]}
+					title="Food"
 				/>
 			</section>
 		</>
