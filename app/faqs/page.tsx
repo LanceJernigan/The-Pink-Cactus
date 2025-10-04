@@ -12,7 +12,7 @@ const FAQsPage = async () => {
 		{},
 		options,
 	);
-	console.log(faqs);
+
 	return (
 		<section className={styles.FAQs}>
 			<FAQs questions={faqs} />
