@@ -13,8 +13,8 @@ const FAQs = ({ questions }: FAQsProps) => {
 				<header className={styles.header}>
 					<h1>Frequently Asked Questions</h1>
 					<p>
-						Have questions? We've got answers! Explore our FAQs below to find
-						quick solutions and helpful information about our services.
+						Have questions? We&apos;ve got answers! Explore our FAQs below to
+						find quick solutions and helpful information about our services.
 					</p>
 				</header>
 				<ul className={styles.list}>
