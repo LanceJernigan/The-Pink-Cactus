@@ -66,6 +66,12 @@
 		}
 	}
 
+	&:focus-within {
+		background: #ff4679;
+		color: #fff;
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+	}
+
 	&:hover {
 		background: #ff4679;
 		color: #fff;
@@ -84,6 +90,7 @@
 	cursor: pointer;
 	padding: 30px;
 	color: inherit;
+	outline: none;
 }
 
 .answer {
