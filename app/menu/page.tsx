@@ -27,8 +27,6 @@ export default async function Menu() {
 		items: menuItems.filter((item) => item.category._ref === category._id),
 	}));
 
-	console.log(menuItems, menuItemCategories, mergedMenuItems);
-
 	return (
 		<>
 			<section className={styles.menuItems}>

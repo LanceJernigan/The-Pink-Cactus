@@ -8,6 +8,7 @@ import Compass from "@/icons/compass";
 import Cross from "@/icons/cross";
 import { useState } from "react";
 import Check from "@/icons/check";
+import { ContactFormProps } from "./types";
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -33,7 +34,7 @@ const testValues = ({
 		: "You must enter a valid message.",
 });
 
-const ContactForm = () => {
+const ContactForm = ({ phone, email, mapLink }: ContactFormProps) => {
 	const [status, setStatus] = useState("new");
 	const [fields, setFields] = useState({
 		name: "",
@@ -167,7 +168,7 @@ const ContactForm = () => {
 						<ul className={styles.list}>
 							<li className={styles.infoItem}>
 								<a
-									href="https://maps.app.goo.gl/VucVjQdptAMiT3ba8"
+									href={mapLink}
 									target="_blank"
 								>
 									<Compass />
@@ -175,13 +176,13 @@ const ContactForm = () => {
 								</a>
 							</li>
 							<li className={styles.infoItem}>
-								<a href="mailto:thepinkcactusknox@gmail.com">
+								<a href={`mailto:${email}`}>
 									<Email />
 									Email
 								</a>
 							</li>
 							<li className={styles.infoItem}>
-								<a href="tel:(865) 437-3293">
+								<a href={`tel:${phone}`}>
 									<Phone />
 									Call
 								</a>

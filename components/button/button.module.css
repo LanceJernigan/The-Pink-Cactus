@@ -6,6 +6,7 @@
 	font-size: 24px;
 	cursor: pointer;
 	color: #fff;
+	display: inline-block;
 	transition:
 		box-shadow 0.2s ease-in-out,
 		transform 0.2s ease-in-out,
