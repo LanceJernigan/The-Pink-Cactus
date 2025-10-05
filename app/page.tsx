@@ -19,8 +19,6 @@ export default async function Home() {
 		}[];
 	}>(CONTENT_QUERY, {}, options);
 
-	console.log(content.featurettes[0]);
-
 	return (
 		<>
 			<Hero slogan={content.hero.slogan} />
