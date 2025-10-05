@@ -1,0 +1,8 @@
+.FAQs {
+	min-height: calc(100vh - 94px);
+	padding: 180px 0 100px;
+	margin-top: -80px;
+	background: #fcc3b0;
+	display: grid;
+	gap: 100px;
+}
