@@ -1,70 +1,51 @@
-"use client";
-
 import Featurette from "@/components/featurette";
 import Hero from "@/components/hero";
+import { client } from "@/sanity/client";
+import imageUrlBuilder from "@/sanity/imageUrlBuilder";
 import styles from "./page.module.css";
-import Button from "@/components/button";
 
-export default function Home() {
+const CONTENT_QUERY = `*[_type == "home"][0]`;
+
+const options = { next: { revalidate: 30 } };
+
+export default async function Home() {
+	const content = await client.fetch<{
+		hero: { slogan: string };
+		featurettes: {
+			title: string;
+			content: string;
+			image: { asset: { _ref: string }; alt?: string };
+			link?: { url: string; text: string; newTab?: boolean };
+		}[];
+	}>(CONTENT_QUERY, {}, options);
+
+	console.log(content.featurettes[0]);
+
 	return (
 		<>
-			<Hero />
+			<Hero slogan={content.hero.slogan} />
 			<section className={styles.featurettes}>
-				<Featurette
-					title="Karaoke Rooms"
-					image={{
-						src: "/assets/images/karaoke.jpg",
-						alt: "Karaoke room with pink lighting and a microphone on a stand",
-					}}
-				>
-					<p>
-						Grab your friends, cue up your playlist, and own the spotlight. Our
-						private karaoke rooms are built for birthdays, nights out, and
-						unforgettable sing-along moments.
-					</p>
-					<p>
-						Reservations are strongly recommended because we fill up fast,
-						especially on the weekends!
-					</p>
-					<Button
-						onClick={() =>
-							window.open(
-								"https://tables.toasttab.com/restaurants/2c7effac-599a-429d-8dc5-eeb2554d6531/findTime",
-								"_blank",
-							)
-						}
-						raised
-					>
-						Reserve Now
-					</Button>
-				</Featurette>
-				<Featurette
-					title="The Bar"
-					image={{
-						src: "/assets/images/bar.jpg",
-						alt: "Karaoke room with pink lighting and a microphone on a stand",
-					}}
-					reverse
-				>
-					<p>
-						Skip the mic and sink into the vibe downstairs. With craft
-						cocktails, latin-inspired food, and a laid-back lounge feel, it’s
-						the perfect spot for date night, pre-game, or just hanging out.
-					</p>
-				</Featurette>
-				<Featurette
-					title="Front Yard Patio"
-					image={{
-						src: "/assets/images/house.jpg",
-						alt: "Karaoke room with pink lighting and a microphone on a stand",
-					}}
-				>
-					<p>
-						Step outside and breathe it in. Our spacious patio — with covered
-						seating and yard games — keeps the good life rolling under
-						the Knoxville sky.
-					</p>
-				</Featurette>
+				{content.featurettes.map((featurette, i) => {
+					const splitContent = featurette.content
+						.split("\n")
+						.filter((p: string) => p.trim() !== "");
+					return (
+						<Featurette
+							key={i}
+							title={featurette.title}
+							image={{
+								src: imageUrlBuilder(featurette.image).width(600).url() || "",
+								alt: featurette.image.alt || "",
+							}}
+							link={featurette.link}
+							reverse={i % 2 === 1}
+						>
+							{splitContent.map((paragraph: string, j: number) => (
+								<p key={j}>{paragraph}</p>
+							))}
+						</Featurette>
+					);
+				})}
 			</section>
 		</>
 	);
