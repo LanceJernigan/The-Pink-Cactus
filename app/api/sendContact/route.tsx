@@ -20,6 +20,7 @@ export async function POST(req: Request) {
 			from: `The Pink Cactus <no-reply@thepinkcactusknox.com>`,
 			to: "thepinkcactusknox@gmail.com",
 			subject: "New Contact Form Submission",
+			replyTo: email,
 			react: (
 				<ContactTemplate
 					message={message}
