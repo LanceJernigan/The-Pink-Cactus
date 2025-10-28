@@ -7,9 +7,9 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export async function POST(req: Request) {
 	try {
 		const body = await req.json();
-		const { name, email, message } = body;
+		const { firstName, lastName, phone, email, message } = body;
 
-		if (!name || !email || !message) {
+		if (!firstName || !lastName || !phone || !email || !message) {
 			return NextResponse.json(
 				{ error: "Missing required fields: name, email, message" },
 				{ status: 400 },
@@ -24,7 +24,9 @@ export async function POST(req: Request) {
 			react: (
 				<ContactTemplate
 					message={message}
-					name={name}
+					firstName={firstName}
+					lastName={lastName}
+					phone={phone}
 					email={email}
 				/>
 			),
