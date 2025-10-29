@@ -105,4 +105,8 @@
 	padding: 0 30px;
 	overflow: hidden;
 	white-space: pre-line;
+
+	a {
+		text-decoration: underline;
+	}
 }

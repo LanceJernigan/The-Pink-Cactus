@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { PortableText } from "@portabletext/react";
 import styles from "./faqs.module.css";
 import { FAQsProps } from "./types";
 
@@ -39,7 +40,7 @@ const FAQs = ({ questions }: FAQsProps) => {
 								hidden
 								id={`faq-${i}-panel`}
 							>
-								<p>{answer}</p>
+								<PortableText value={answer} />
 							</div>
 						</li>
 					))}
