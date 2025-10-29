@@ -104,4 +104,5 @@
 		padding 0.2s ease-in-out;
 	padding: 0 30px;
 	overflow: hidden;
+	white-space: pre-line;
 }
