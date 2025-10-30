@@ -8,40 +8,56 @@ import Compass from "@/icons/compass";
 import Cross from "@/icons/cross";
 import { useState } from "react";
 import Check from "@/icons/check";
+import { ContactFormProps } from "./types";
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const phoneRegex = /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/;
 
 const validations = {
-	name: (value: string) => !!value.length,
+	firstName: (value: string) => !!value.length,
+	lastName: (value: string) => !!value.length,
+	phone: (value: string) => phoneRegex.test(value),
 	email: (value: string) => emailRegex.test(value),
 	message: (value: string) => !!value.length,
 };
 
 const testValues = ({
-	name,
+	firstName,
+	lastName,
+	phone,
 	email,
 	message,
 }: {
-	name: string;
+	firstName: string;
+	lastName: string;
+	phone: string;
 	email: string;
 	message: string;
 }) => ({
-	name: validations.name(name) ? "" : "You must enter a name.",
+	firstName: validations.firstName(firstName)
+		? ""
+		: "You must enter a first name.",
+	lastName: validations.lastName(lastName) ? "" : "You must enter a last name.",
+	phone: validations.phone(phone) ? "" : "You must enter a valid phone number.",
 	email: validations.email(email) ? "" : "You must enter a valid email.",
 	message: validations.message(message)
 		? ""
 		: "You must enter a valid message.",
 });
 
-const ContactForm = () => {
+const ContactForm = ({ phone, email, mapLink }: ContactFormProps) => {
 	const [status, setStatus] = useState("new");
 	const [fields, setFields] = useState({
-		name: "",
+		firstName: "",
+		lastName: "",
+		phone: "",
 		email: "",
 		message: "",
 	});
 	const [errors, setErrors] = useState({
-		name: "You must enter a name.",
+		firstName: "You must enter a first name.",
+		lastName: "You must enter a last name.",
+		phone: "You must enter a valid phone number.",
 		email: "You must enter a valid email.",
 		message: "You must enter a valid message.",
 	});
@@ -98,14 +114,25 @@ const ContactForm = () => {
 							data-submitting={status === "submitting"}
 						>
 							<div className={styles.fields}>
-								<label htmlFor="name">
-									Name:
+								<label htmlFor="firstName">
+									First Name:
 									<input
 										type="text"
-										id="name"
-										name="name"
+										id="firstName"
+										name="firstName"
 										onChange={handleChange}
-										value={fields.name}
+										value={fields.firstName}
+										required
+									/>
+								</label>
+								<label htmlFor="lastName">
+									Last Name:
+									<input
+										type="text"
+										id="lastName"
+										name="lastName"
+										onChange={handleChange}
+										value={fields.lastName}
 										required
 									/>
 								</label>
@@ -117,6 +144,17 @@ const ContactForm = () => {
 										name="email"
 										onChange={handleChange}
 										value={fields.email}
+										required
+									/>
+								</label>
+								<label htmlFor="email">
+									Phone:
+									<input
+										type="text"
+										id="phone"
+										name="phone"
+										onChange={handleChange}
+										value={fields.phone}
 										required
 									/>
 								</label>
@@ -134,7 +172,9 @@ const ContactForm = () => {
 								type="submit"
 								disabled={
 									status === "submitting" ||
-									!!errors.name.length ||
+									!!errors.firstName.length ||
+									!!errors.lastName.length ||
+									!!errors.phone.length ||
 									!!errors.email.length ||
 									!!errors.message.length
 								}
@@ -167,7 +207,7 @@ const ContactForm = () => {
 						<ul className={styles.list}>
 							<li className={styles.infoItem}>
 								<a
-									href="https://maps.app.goo.gl/VucVjQdptAMiT3ba8"
+									href={mapLink}
 									target="_blank"
 								>
 									<Compass />
@@ -175,13 +215,13 @@ const ContactForm = () => {
 								</a>
 							</li>
 							<li className={styles.infoItem}>
-								<a href="mailto:thepinkcactusknox@gmail.com">
+								<a href={`mailto:${email}`}>
 									<Email />
 									Email
 								</a>
 							</li>
 							<li className={styles.infoItem}>
-								<a href="tel:(865) 437-3293">
+								<a href={`tel:${phone}`}>
 									<Phone />
 									Call
 								</a>

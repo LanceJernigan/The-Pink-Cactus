@@ -37,6 +37,9 @@ const Navigation = () => {
 							<Link href="/menu">Menu</Link>
 						</li>
 						<li>
+							<Link href="/faqs">FAQs</Link>
+						</li>
+						<li>
 							<Link href="/contact">Contact</Link>
 						</li>
 						<li>
