@@ -11,7 +11,7 @@ import Check from "@/icons/check";
 import { ContactFormProps } from "./types";
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const phoneRegex = /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/;
+const phoneRegex = /^(?:\d{10}|(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4})$/;
 
 const validations = {
 	firstName: (value: string) => !!value.length,
